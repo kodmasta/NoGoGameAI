@@ -9,10 +9,10 @@ AI design: Minimax + Alpha-Beta Pruning (Computer vs Player)
 
 3. The Maximizer of the "Minimax + Alpha-Beta" Game Tree is the Computer, and the Minimizer is the Player. By saving Alpha and Beta values, the Game Tree realizes the optimization of pruning. The depth of the "Minimax + Alpha-Beta" Game Tree is D+1. The depth is determined in advance in #define Target_Depth.
 
-4. The program uses the evaluationFunc() function to determine the return value of each leaf node of the "Minimax + Alpha-Beta" Game Tree (it calculates how many positions on the chessboard the Computer can still place chess pieces). The total number of leaf nodes depends on the "placeable positions" n in the return area of the findScope() function: [total number = n!/(n-D)! - (the "pruned" subtrees and leaf nodes)]. The evaluationFunc() is very simple, optimization mainly takes place in findScope() and pruning.
+4. The program uses the evaluationFunc() function to determine the return value of each leaf node of the "Minimax + Alpha-Beta" Game Tree (it calculates how many positions on the chessboard the Computer can still place chess pieces). The total number of leaf nodes depends on the "placeable positions" n in the return area of the findScope() function: [n!/(n-D)! - (the "pruned" subtrees and leaf nodes)]. The evaluationFunc() is very simple, optimization mainly takes place in findScope() and pruning.
 
 5. Through the above analysis, the findBestMove() function finds the values of all positions in the scope. Its return value is the position of the Computer's move.
 
 
 Instructions.
-Run the file. The game has a complete menu (press "M" to enter the menu). "Save" and "read" options are done using ofstream myfile ("gamedata.txt") and ifstream myfile ("gamedata.txt"). If you run the program on a Windows system, you may need to rewrite the directory.
+Run the file. The game has a complete menu (press "M" to enter the menu). "Save" and "Resume" options are done using ofstream myfile ("gamedata.txt") and ifstream myfile ("gamedata.txt"), therefore, if you run the program on a Windows system, you may need to rewrite the directory.
