@@ -15,4 +15,5 @@ AI design: Minimax + Alpha-Beta Pruning (Computer vs Player)
 
 
 Instructions.
+
 Run the file. The game has a complete menu (press "M" to enter the menu). "Save" and "Resume" options are done using ofstream myfile ("gamedata.txt") and ifstream myfile ("gamedata.txt"), therefore, if you run the program on a Windows system, you may need to rewrite the directory.
